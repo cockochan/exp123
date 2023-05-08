@@ -4,8 +4,8 @@
   "description": "Express and React template",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "build": "cross-env NODE_ENV=\"production\" webpack --config client/webpack.config.js -p",
+    "start": "npm run dev",
+    "build": "cross-env NODE_ENV=\"production\" webpack --config client/webpack.config.js --mode production",
     "dev": "cross-env NODE_ENV=\"development\" nodemon --ignore ./client/ index.js"
   },
   "repository": {

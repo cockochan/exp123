@@ -1,0 +1,60 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Sogeti Portfolio CRUD",
+    "description": "Sogeti portfolio API",
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "Services",
+      "description": "API for services description"
+    }
+  ],
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/services": {
+      "get": {
+        "tags": ["Service"],
+        "summary": "Get Sogeti services text and description",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Service"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Service": {
+      "required": ["id", "name", "text"],
+      "properties": {
+        "id": {
+          "type": "integer",
+          "uniqueItems": true
+        },
+        "name": {
+          "type": "string"
+        },
+        "text": {
+          "type": "string"
+        }
+      },
+      "services": {
+        "type": "array",
+        "$ref": "#/definitions/Service"
+      }
+    }
+  }
+}

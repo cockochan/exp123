@@ -9,7 +9,7 @@
       "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "https://exp123.azurewebsites.net/:3000",
+  "host": "https://exp123.azurewebsites.net",
   "basePath": "/",
   "tags": [
     {
